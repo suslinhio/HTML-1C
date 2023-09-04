@@ -1,11 +1,20 @@
 p {
-    color: blueviolet;
+    color: cadetblue;
+    /* font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace; */
+    font: italic 600 19px Courier, monospace;
 }
 
-.red-color {
-    color: red;
+.parag {
+    color: darkblue;
 }
 
-#green-color {
-    color: green;
+#first {
+    color: darkred;
+}
+
+.violet {
+    color: violet;
 }
