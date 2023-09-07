@@ -1,0 +1,21 @@
+.box {
+    background-color: cadetblue;
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgb(37, 30, 30);
+    display: inline-block;
+    margin: 20px;
+    font-size: 20px;
+    color: yellow;
+    overflow-y: scroll;
+}
+
+.limegreen {
+    background-color: limegreen;
+    color: deeppink;
+}
+
+.deepskyblue {
+    background-color: deepskyblue;
+    color: darkblue;
+}
