@@ -1,20 +1,97 @@
-p {
-    color: cadetblue;
-    /* font-size: 16px;
-    font-weight: 600;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace; */
-    font: italic 600 19px Courier, monospace;
+.modal-window-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(26, 24, 24, 0.534);
 }
 
-.parag {
-    color: darkblue;
+.modal-window {
+    position: absolute;
+    width: 450px;
+    height: 250px;
+    background-color: azure;
+    top: 32%;
+    left: 31%;
+    border-radius: 10px;
+    border: 1px solid grey;
 }
 
-#first {
-    color: darkred;
+.cross {
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 15px;
 }
 
-.violet {
-    color: violet;
+.cross:hover {
+    color: #d32f3d;
+    cursor: pointer;
 }
+
+.centre {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.1em;
+}
+
+.alert {
+    padding-top: 15%;
+    color: rgb(75, 74, 74);
+}
+
+.cancel-button {
+    display: inline-block;
+    background-color: #ec3444;
+    border: 1px solid #d32f3d;
+    color: white;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.cancel-button:hover {
+    color: #d32f3d;
+    background-color: azure;
+    cursor: pointer;
+}
+
+.confirm-button {
+    display: inline-block;
+    color: rgb(75, 74, 74);
+    border: 1px solid rgb(75, 74, 74);
+    margin-left: 9%;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin-top: 5%;
+    
+}
+
+.confirm-button:hover {
+    background-color: rgb(104, 201, 104);
+    color: white;
+    cursor: pointer;
+}
+
+/* 
+ПОзиціонування - розташування елементів в потоці івдносно одне одного.
+
+static - не позиціонований елемент (за замовчуванням)
+
+relative - позиціонування відносно свого законного місця в потоці
+
+fixed - позиціонування відносно вьюпорта, елемент виривається з потоку
+
+absolute - позиціонування відносно найближчого нестатичного батька, виривається з потоку
+
+sticky - позиціонування відносно батьківського елемента і вьюпорта
+
+top
+left 
+right
+bottom 
+
+z-index - координата елемента по з-осі, чим більше, тим ближче елемент до глядачя
+*/
