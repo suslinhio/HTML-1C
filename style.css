@@ -1,47 +1,68 @@
-.nav-container {
-    color: white;
+.card-wrapper {
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+}
+
+.card-container {
+    min-width: 15vw;
+    max-width: 300px;
+    height: 350px;
+    border: 1px solid rgb(111, 89, 235);
+    border-radius: 15px;
     font-family: sans-serif;
-    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2em;
+
+    -webkit-box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
+    -moz-box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
+    box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
 }
 
-.list-item {
-    display: inline-block;
-    list-style-type: none;
-    background-color: #e64a19;
-    padding: 10px 20px;
+.user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+}
+
+.user-nickname {
+    font-weight: 800;
+    font-size: 1.2em;
+    margin: 2em 0 1em;
+}
+
+.position {
+    font-size: 0.9em;
+    color: rgb(100, 100, 100);
+    margin: 1em 0 3em;
+}
+
+.button {
+    border: none;
+    padding: 10px 35px;
+    border-radius: 4px;
+    background-color: rgb(128, 108, 240);
     color: white;
-    font-size: 1rem;
-    position: relative;
-    box-sizing: border-box;
+    font-weight: 700;
+    
+    -webkit-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
 }
 
-.list-item:hover {
-    background-color: #8a2d0f;
+.button:hover {
+    background-color: rgb(151, 133, 253);
     cursor: pointer;
-}
-
-.sub-list {
-    position: absolute;
-    display: none;
-    top: 100%;
-    left: 0;
-    background-color: #e64a19;
-    box-sizing: border-box;
-}
-
-.list-item:hover > .sub-list {
-    display: block;
-}
-
-.sub-list-item {
-    width: 100%;
-}
-
-.double-sub-list {
-    top: 0;
-    left: 100%;
-}
-
-.triple-sub-list-item {
-    white-space: nowrap;
+    -webkit-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
 }
