@@ -1,68 +1,164 @@
-.card-wrapper {
-    /* display: flex;
-    justify-content: center;
-    align-content: center; */
+:root {
+    --header-size: 10vh;
+    --main-color: rgb(24, 23, 23);
 }
 
-.card-container {
-    min-width: 15vw;
-    max-width: 300px;
-    height: 350px;
-    border: 1px solid rgb(111, 89, 235);
-    border-radius: 15px;
-    font-family: sans-serif;
+.header {
+    width: 100%;
+    height: var(--header-size);
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 2em;
-
-    -webkit-box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
-    -moz-box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
-    box-shadow: 11px 14px 15px -13px rgba(129,109,240,1);
 }
 
-.user-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.logo {
+    width: 8vh;
+    height: 8vh;
     border-radius: 50%;
-
-    -webkit-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
+    margin-left: 30px;
 }
 
-.user-nickname {
-    font-weight: 800;
-    font-size: 1.2em;
-    margin: 2em 0 1em;
-}
-
-.position {
-    font-size: 0.9em;
-    color: rgb(100, 100, 100);
-    margin: 1em 0 3em;
-}
-
-.button {
-    border: none;
-    padding: 10px 35px;
-    border-radius: 4px;
-    background-color: rgb(128, 108, 240);
-    color: white;
-    font-weight: 700;
+.navigation-list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
     
-    -webkit-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 9px 11px -6px rgba(0,0,0,0.75);
 }
 
-.button:hover {
-    background-color: rgb(151, 133, 253);
-    cursor: pointer;
-    -webkit-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
-    box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.75);
+.nav-item {
+    color: var(--main-color);
+    margin-right: 30px;
+    font-size: 1.5em;
+    padding:  0.79em;
 }
+
+.nav-item::after {
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    display: block;
+    content: ' ';
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-item:hover::after {
+    /* background-color: var(--main-color);
+    color: white; */
+    width: 0;
+}
+
+.sandbox {
+    width: 100%;
+    height: 50vh;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    background-image: url('./Assets/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    transform: rotate(45deg);
+}
+
+.banner {
+    width: 100%;
+    height: calc(100vh - var(--header-size));
+    background-image: url('./Assets/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.news-section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.news-card {
+    width: 30%;
+    padding: 2em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 2vh 1vw;
+}
+/* 
+Flex childs
+
+Order - порядок елементу в потоці серед інших флекс-дітей
+Чим більше значення, тим пізніше буде йти елемент серед інших. За однакового значення властивості елементи стають за своїм порядком у потоці
+
+align-self - розташування себе (конкретного елемента) за побічною віссю. Для цього елемента перевизначає align-items
+
+Розміри елементів
+
+flex-basis - ОРІЄНТОВНИЙ (базовий) розмір елементу за головною віссю
+
+flex-grow - коефіцієнт зростання розміру елементу (в плюс до flex-basis, якщо у батьківського елементу Є ВІЛЬНИЙ простір)
+
+!!! Розрахунок коефіцієнтів !!!
+
+parent container = 1000px
+Зайнято - flex-basis *5 = 500px
+Вільного місця = 500px
+
+1	1	1	1	1
+
+Сума коефіцієнтів = 5
+Вільне місце / суму коефіцієнтів = 500/5 = 100px (доля вільного місця)
+
+Розмір елементу = flex-basis + доля вільного місця*коефіцієнт = 100px + 100px*1
+
+
+--------
+
+Інша ситуація:
+
+1	2	1	1	1
+
+Сума коефіцієнтів = 6
+Доля вільного місця = вільне місце / суму коефіцієнтів = 500/6 = 83.3
+
+Розмір елементів
+
+100+83.3*1	100+83.3*2 	100+83.3*1	100+83.3*1	100+83.3*1
+183		266		183		183		183
+
+--------
+
+
+
+
+flex-shrink - коефіцієнт стискання елементу, якщо розміри батьківського не дозволяють зайняти flex-basis
+
+Розмір батьківського (реальний) - сумма flex-basis = 200px - 500px = 300px
+
+1	1	1	1	1
+Сума коефіцієнтів = 5
+Доля простору, на який треба стиснутись = 300/5 = 60px
+
+Розміри
+flex-basis мінус доля простору, на яку треба стиснутись * коефіцієнт
+
+40	40	40	40	40
+
+
+
+content => width/height => flex-basis => max-width/height => min-width/height
+
+flex-basis => content
+
+
+
+flex (скорочення): 
+*/
