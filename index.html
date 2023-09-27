@@ -8,80 +8,45 @@
     <link rel="stylesheet" href="./style.css"/>
 </head>
     <body>
-        <form method="GET" class="form">
-            <label for="user-name">Type your name</label>
-            <input 
+        <main class="main">
+            <div class="form-box">
+                <h2 class="header">Signup form</h2>
+            <form class="form">
+                <label for="User-Id">User Id</label>
+                <input 
                     type="text" 
-                    id="user-name" 
-                    name="username">
-            <label class="flex-row"> Type your email
-            <input 
-                    type="email" 
-                    placeholder="name@example.com" name="email">
-            </label>
-            <input 
-                    type="password" 
-                    placeholder="Type your password" name="password">
-            <label for="tel-number">Type your phone number</label>
-            <input 
-                    type="tel" 
-                    id="tel-number" 
-                    placeholder="+380505909207" name="tel-number">
-            <p class="required">Choose your gender</p>
-            <label><input 
-                        type="radio" 
-                        name="gender" 
-                        value="Male"> 
-                        Male</label>
-            <label><input 
-                        type="radio" 
-                        name="gender" 
-                        value="Female"> 
-                        Female</label>
-            <label><input 
-                        type="radio" 
-                        name="gender" 
-                        value="Non-binary"
-                        required> 
-                        Non-binary</label>
-
-            <label class="required"><input 
-                        type="checkbox" 
-                        name="adult" 
-                        required> 
-                        Are you adult?</label>
-            <label class="required"><input 
-                        type="checkbox" 
-                        name="agree" 
-                        required> 
-                        Do you agree with the terms of use?</label>
-                        <input type="file">
-                        <input type="hidden">
-                        <input type="range">
-                        <input type="color">
-                        <input type="date">
-                        <input type="datetime-local">
-            <textarea name="" id="" cols="30" rows="10"></textarea>    
-            <label>
-                Choose your city
-                <select name="city" id="city-list">
-                    <option value="Kharkiv">Kharkiv</option>
-                    <option value="Kyiv">Kyiv</option>
-                    <option value="Lviv">Lviv</option>
-                    <option value="Odesa">Odesa</option>
-                </select>
-            </label>
-            <label> 
-                Choose your city
-                <input type="text" list="city-list-2">
-                <datalist name="city" id="city-list-2">
-                    <option value="Kharkiv">Kharkiv</option>
-                    <option value="Kyiv">Kyiv</option>
-                    <option value="Lviv">Lviv</option>
-                    <option value="Odesa">Odesa</option>
-                </datalist>
-            </label>
-            <button>Submit</button>
-        </form>
+                    id="User-Id">
+                <label for="Password">Password</label>
+                <input 
+                    type="text" 
+                    id="Password">
+                <label for="name">Name</label>
+                <input  
+                    type="text" 
+                    id="name">
+                <label class="flex-row">Country
+                    <input  
+                        type="text" 
+                        id="Country"
+                        placeholder="Select An Option"
+                        list="country-list">
+                    <datalist id="country-list">
+                        <option value="Germany">Germany</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="USA">USA</option>
+                        <option value="Italy">Italy</option>
+                    </datalist>
+                </label>
+                <label for="zip">Zip Code</label>
+                <input  
+                    type="text" 
+                    id="zip">
+                <label for="Email">Email</label>
+                <input  
+                    type="text" 
+                    id="Email">
+            </form>
+        </div>
+        </main>
     </body>
 </html>

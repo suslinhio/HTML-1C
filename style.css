@@ -4,30 +4,70 @@
     
 }
 
-.form {
-    width: 300px;
+.main {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 35%;
+    height: 75vh;
+    background-color: #ffffff;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    margin: 0 auto;
-    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.form {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    color: #7563c2;
+    font-weight: 600;
+    box-sizing: border-box;
 }
 
 .form * {
-    margin: 5px 0;
+    margin-top: 5px;
+}
+
+.form input {
+    border: 2px solid #5cc7a8;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.form input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: black;
 }
 
 .flex-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-.required::after {
-    content: '*';
-    font-size: 0.9em;
-    color: red;
-}
 /* 
 Form elements:
 - form: 
@@ -56,5 +96,5 @@ Form elements:
 - textarea - to print big texts
 - select - for dropdown-menu(only options):
     - option
-- datalist - for dropdown-menu with individual options, has to be labeled with input
+- datalist - for dropdown-menu with individual options, has to be labeled with input and id
 */
