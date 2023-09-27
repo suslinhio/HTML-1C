@@ -4,51 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./reset.css"/>
+    <!-- <link rel="stylesheet" href="./reset.css"/> -->
     <link rel="stylesheet" href="./style.css"/>
 </head>
     <body>
-        <header class="header">
-            <img src="./Assets/me.png" class="logo"/>
-            <nav class="navigation">
-                <ul class="navigation-list">
-                    <li class="nav-item">Home</li>
-                    <li class="nav-item">About</li>
-                    <li class="nav-item">Contacts</li>
-                </ul>
-            </nav>
-        </header>
-        <section class="sandbox">
-            <div class="box"></div>
-        </section>
-        <main>
-            <section class="banner"></section>
-            <section class="news-section">
-                <article class="news-card">
-                    <h3>Heading 1</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-                <article class="news-card">
-                    <h3>Heading 2</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-                <article class="news-card">
-                    <h3>Heading 3</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-                <article class="news-card">
-                    <h3>Heading 4</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-                <article class="news-card">
-                    <h3>Heading 5</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-                <article class="news-card">
-                    <h3>Heading 6</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim assumenda illo impedit odio quidem nihil facilis natus! Facilis, rerum eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis unde minus eius in tempora praesentium aspernatur eum eos voluptatibus perspiciatis?</p>
-                </article>
-            </section>
-        </main>
+        <form method="GET" class="form">
+            <label for="user-name">Type your name</label>
+            <input 
+                    type="text" 
+                    id="user-name" 
+                    name="username">
+            <label class="flex-row"> Type your email
+            <input 
+                    type="email" 
+                    placeholder="name@example.com" name="email">
+            </label>
+            <input 
+                    type="password" 
+                    placeholder="Type your password" name="password">
+            <label for="tel-number">Type your phone number</label>
+            <input 
+                    type="tel" 
+                    id="tel-number" 
+                    placeholder="+380505909207" name="tel-number">
+            <p class="required">Choose your gender</p>
+            <label><input 
+                        type="radio" 
+                        name="gender" 
+                        value="Male"> 
+                        Male</label>
+            <label><input 
+                        type="radio" 
+                        name="gender" 
+                        value="Female"> 
+                        Female</label>
+            <label><input 
+                        type="radio" 
+                        name="gender" 
+                        value="Non-binary"
+                        required> 
+                        Non-binary</label>
+
+            <label class="required"><input 
+                        type="checkbox" 
+                        name="adult" 
+                        required> 
+                        Are you adult?</label>
+            <label class="required"><input 
+                        type="checkbox" 
+                        name="agree" 
+                        required> 
+                        Do you agree with the terms of use?</label>
+                        <input type="file">
+                        <input type="hidden">
+                        <input type="range">
+                        <input type="color">
+                        <input type="date">
+                        <input type="datetime-local">
+            <textarea name="" id="" cols="30" rows="10"></textarea>    
+            <label>
+                Choose your city
+                <select name="city" id="city-list">
+                    <option value="Kharkiv">Kharkiv</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Odesa">Odesa</option>
+                </select>
+            </label>
+            <label> 
+                Choose your city
+                <input type="text" list="city-list-2">
+                <datalist name="city" id="city-list-2">
+                    <option value="Kharkiv">Kharkiv</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Odesa">Odesa</option>
+                </datalist>
+            </label>
+            <button>Submit</button>
+        </form>
     </body>
 </html>

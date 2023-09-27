@@ -1,164 +1,60 @@
+@import url('./reset.css');
+
 :root {
-    --header-size: 10vh;
-    --main-color: rgb(24, 23, 23);
-}
-
-.header {
-    width: 100%;
-    height: var(--header-size);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.logo {
-    width: 8vh;
-    height: 8vh;
-    border-radius: 50%;
-    margin-left: 30px;
-}
-
-.navigation-list {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
     
 }
 
-.nav-item {
-    color: var(--main-color);
-    margin-right: 30px;
-    font-size: 1.5em;
-    padding:  0.79em;
-}
-
-.nav-item::after {
-    width: 100%;
-    height: 3px;
-    background-color: var(--main-color);
-    display: block;
-    content: ' ';
-    transition-duration: 500ms;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
-
-.nav-item:hover {
-    cursor: pointer;
-}
-
-.nav-item:hover::after {
-    /* background-color: var(--main-color);
-    color: white; */
-    width: 0;
-}
-
-.sandbox {
-    width: 100%;
-    height: 50vh;
-}
-
-.box {
-    width: 150px;
-    height: 150px;
-    border: 1px solid black;
-    background-image: url('./Assets/background.jpeg');
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
-    transform: rotate(45deg);
-}
-
-.banner {
-    width: 100%;
-    height: calc(100vh - var(--header-size));
-    background-image: url('./Assets/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.news-section {
+.form {
+    width: 300px;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 1%;
 }
 
-.news-card {
-    width: 30%;
-    padding: 2em;
-    border: 1px solid black;
-    box-sizing: border-box;
-    margin: 2vh 1vw;
+.form * {
+    margin: 5px 0;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.required::after {
+    content: '*';
+    font-size: 0.9em;
+    color: red;
 }
 /* 
-Flex childs
+Form elements:
+- form: 
+    method "GET" - collect data by adressline
 
-Order - порядок елементу в потоці серед інших флекс-дітей
-Чим більше значення, тим пізніше буде йти елемент серед інших. За однакового значення властивості елементи стають за своїм порядком у потоці
+- input types:
+    text 
+    email (email format check)
+    password (safe input)
+    tel (browser will remember)
+    radio
+    file (to upload files)
+    hidden (not widely used)
+    color
+    date
+    datetime/datetime-local
 
-align-self - розташування себе (конкретного елемента) за побічною віссю. Для цього елемента перевизначає align-items
+- input atributes:
+    type
+    name - specify type of data for collection
+    value - specify data details for collection
+    required - mandatory fields
 
-Розміри елементів
+- button - to send a form
 
-flex-basis - ОРІЄНТОВНИЙ (базовий) розмір елементу за головною віссю
-
-flex-grow - коефіцієнт зростання розміру елементу (в плюс до flex-basis, якщо у батьківського елементу Є ВІЛЬНИЙ простір)
-
-!!! Розрахунок коефіцієнтів !!!
-
-parent container = 1000px
-Зайнято - flex-basis *5 = 500px
-Вільного місця = 500px
-
-1	1	1	1	1
-
-Сума коефіцієнтів = 5
-Вільне місце / суму коефіцієнтів = 500/5 = 100px (доля вільного місця)
-
-Розмір елементу = flex-basis + доля вільного місця*коефіцієнт = 100px + 100px*1
-
-
---------
-
-Інша ситуація:
-
-1	2	1	1	1
-
-Сума коефіцієнтів = 6
-Доля вільного місця = вільне місце / суму коефіцієнтів = 500/6 = 83.3
-
-Розмір елементів
-
-100+83.3*1	100+83.3*2 	100+83.3*1	100+83.3*1	100+83.3*1
-183		266		183		183		183
-
---------
-
-
-
-
-flex-shrink - коефіцієнт стискання елементу, якщо розміри батьківського не дозволяють зайняти flex-basis
-
-Розмір батьківського (реальний) - сумма flex-basis = 200px - 500px = 300px
-
-1	1	1	1	1
-Сума коефіцієнтів = 5
-Доля простору, на який треба стиснутись = 300/5 = 60px
-
-Розміри
-flex-basis мінус доля простору, на яку треба стиснутись * коефіцієнт
-
-40	40	40	40	40
-
-
-
-content => width/height => flex-basis => max-width/height => min-width/height
-
-flex-basis => content
-
-
-
-flex (скорочення): 
+- textarea - to print big texts
+- select - for dropdown-menu(only options):
+    - option
+- datalist - for dropdown-menu with individual options, has to be labeled with input
 */
